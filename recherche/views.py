@@ -14,12 +14,12 @@ def search_lawyers(request):
     location = request.query_params.get('location', '')
 
    
-    conditions = Q()
+    conditions = Q() # This is an empty Q object
 
     if Probleme_juridique:
         conditions |= Q(Probleme_juridique__iexact=Probleme_juridique)
     if location:
-        conditions |= Q(location__iexact=location)
+        conditions |= Q(location__iexact=location) # The | operator signifies 'OR' in a query
 
     if not any([Probleme_juridique,  location]):
         return Response({'error': 'Please provide at least one search criteria'}, status=400)

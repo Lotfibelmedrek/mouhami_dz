@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'recherche.apps.RechercheConfig',
     'evaluation.apps.EvaluationConfig',
     'blogs.apps.BlogsConfig',
-    
+   
 ]
 
 MIDDLEWARE = [

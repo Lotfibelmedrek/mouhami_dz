@@ -4,7 +4,7 @@ from django.core.validators import RegexValidator, EmailValidator ,MinLengthVali
 class Avocats(models.Model):
     nom_complet= models.CharField(max_length=20, default='', validators=[RegexValidator(regex='^[A-Za-z ]*$', message='Only letters are allowed.')])
     domaine_juridique= models.CharField(max_length=20,validators=[RegexValidator(regex='^[A-Za-z ]*$', message='Only letters are allowed.')]) 
-    email = models.EmailField(validators=[EmailValidator()])
+    email = models.EmailField()
     password = models.CharField(max_length=128,default='')
     numero_telephone = models.CharField(
         max_length=10,default='',
