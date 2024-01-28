@@ -20,14 +20,14 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('logout',include('logout.urls')),
-    path('login/',include('login.urls')),
-    path('register/',include('register.urls')),
-    path('rendez_vous/',include('rendez_vous.urls')),
-    path('recherche/',include('recherche.urls')),
-    path('evaluation/', include('evaluation.urls')),
-    path('blogs/', include('blogs.urls')),
+    path('admin/', admin.site.urls), #
+    path('logout',include('logout.urls')), # lotfi
+    path('login/',include('login.urls')), # lotfi 
+    path('register/',include('register.urls')), # lotfi
+    path('rendez_vous/',include('rendez_vous.urls')), # lotfi
+    path('recherche/',include('recherche.urls')), # lotfi
+    path('evaluation/', include('evaluation.urls')), #med
+    path('blogs/', include('blogs.urls')), #med
     
 
 ]

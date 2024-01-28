@@ -9,4 +9,7 @@ class BlogCreateView(generics.CreateAPIView):
 class BlogListView(generics.ListAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
-# Create your views here.
+
+class BlogDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
