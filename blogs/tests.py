@@ -2,14 +2,14 @@ from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APIClient
-from .models import Lawyer, Blog
+from .models import Avocats, Blog
 
 class BlogCreateViewTest(TestCase):
     def setUp(self):
         self.client = APIClient()
 
     def test_create_blog_post(self):
-        lawyer = Lawyer.objects.create(name='John Doe')
+        lawyer = Avocats.objects.create(name='John Doe')
 
         self.client.force_authenticate(user=lawyer)
 
