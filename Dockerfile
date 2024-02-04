@@ -1,6 +1,6 @@
-FROM python:3.11
+FROM python:3.8
 WORKDIR /app
 COPY requirments.txt .
-RUN pip install --no-cache-dir --upgrade -r requirments.txt
+RUN pip install --upgrade pip && pip install -r requirments.txt
 COPY . .
-CMD ["gunicorn","--bind","0.0.0.0:80","app:create_app()"]
+CMD ["python","manage.py","runserver","0.0.0.0:8000"]
